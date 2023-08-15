@@ -12,6 +12,8 @@ resource "doc_name" "local name" => doc name + local name = UID for your resourc
 2.Provider Configuration documents how to configure settings for providers.
 3.Dependency Lock File documents an additional HCL file that can be included with a configuration, which tells Terraform to always use a specific set of provider versions.
 ## Facts:
+- Terraform plan / apply : auto runs tf refresh command
+- tf refresh: changes tfstate file like if you change region .... but you also have backup state file 
 - Terraform Cloud and Terraform Enterprise install providers as part of every run.
 - To save time: plugin_cache_dir : store in cache
 
