@@ -1,0 +1,17 @@
+- Providers = interact with API
+- provider adds a set of resource types and/or data sources that Terraform can manage.
+- **without providers, Terraform can't manage any kind of infrastructure.**
+- TF Registry  = Home for providers
+> DOCS SUGGEST: In production we recommend constraining the acceptable provider versions in the configuration's provider requirements block, to make sure that terraform init does not install newer versions of the provider that are incompatible with the configuration.
+1.Provider Requirements documents how to declare providers so Terraform can install them.
+2.Provider Configuration documents how to configure settings for providers.
+3.Dependency Lock File documents an additional HCL file that can be included with a configuration, which tells Terraform to always use a specific set of provider versions.
+## Facts:
+- Terraform Cloud and Terraform Enterprise install providers as part of every run.
+- To save time: plugin_cache_dir : store in cache
+
+> DOCS SAYS- To ensure Terraform always installs the same provider versions for a given configuration, you can use Terraform CLI to create a dependency lock file and commit it to version control along with your configuration.
+ - Reinitializing Only Modules - `Tf Get` but many ignore it as `TF init` does all work.
+ - **TF working directory contents:**
+  1. A hidden `.terraform directory`, which Terraform uses to manage cached provider plugins and modules, record which workspace is currently active, and record the last known backend configuration in case it needs to migrate state on the next run.
+  2. State File: 
