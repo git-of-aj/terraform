@@ -14,4 +14,12 @@
  - Reinitializing Only Modules - `Tf Get` but many ignore it as `TF init` does all work.
  - **TF working directory contents:**
   1. A hidden `.terraform directory`, which Terraform uses to manage cached provider plugins and modules, record which workspace is currently active, and record the last known backend configuration in case it needs to migrate state on the next run.
-  2. State File: 
+  2. State File:
+
+-----------------------------------------------
+# TF INIT:
+- During init, the configuration is searched for module blocks, and the source code for referenced modules is retrieved from the locations given in their source argument
+- `--upgrade` to update to latest versions
+- init can be run against an empty directory with the `-from-module=MODULE-SOURCE` option, in which case the given module will be copied into the target directory before any other initialization steps are run.
+- [Backend Initialisation](https://developer.hashicorp.com/terraform/cli/commands/init#backend-initialization)
+- [TF with Pipelines](https://developer.hashicorp.com/terraform/tutorials/automation/automate-terraform?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS)
