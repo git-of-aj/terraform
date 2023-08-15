@@ -1,4 +1,9 @@
 - Providers = interact with API
+ ```sh
+  # just for installing provider you can even right ;
+  provider azurerm{}
+resource "doc_name" "local name" => doc name + local name = UID for your resource hence unique withiin your system 
+  ````
 - provider adds a set of resource types and/or data sources that Terraform can manage.
 - **without providers, Terraform can't manage any kind of infrastructure.**
 - TF Registry  = Home for providers
