@@ -11,6 +11,21 @@ resource "doc_name" "local name" => doc name + local name = UID for your resourc
 1.Provider Requirements documents how to declare providers so Terraform can install them.
 2.Provider Configuration documents how to configure settings for providers.
 3.Dependency Lock File documents an additional HCL file that can be included with a configuration, which tells Terraform to always use a specific set of provider versions.
+ -- use alias for Multiple Provider Configurations => `<PROVIDER NAME>.<ALIAS>`
+```sh
+# The default provider configuration; resources that begin with `aws_` will use
+# it as the default, and it can be referenced as `aws`.
+provider "aws" {
+  region = "us-east-1"
+}
+
+# Additional provider configuration for west coast region; resources can
+# reference this as `aws.west`. ==> 
+provider "aws" {
+  alias  = "west"
+  region = "us-west-2"
+}
+```
 ## Facts:
 - Terraform plan / apply : auto runs tf refresh command
 - tf refresh: changes tfstate file like if you change region .... but you also have backup state file 
