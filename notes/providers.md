@@ -66,3 +66,4 @@ $env:AWS_SECRET_ACCESS_KEY = "your_secret_key"
 
 ## FACT 💡
 - after you apply => `Terraform.tfstate` includes evevry INFo about resources created like subnet id, AZ, Account ID etc
+- After you `destroy` => current terraform.tfstate file renamed as `terraform.tfstate.backup` and a new `terraform.tfstate` file with present changes made
