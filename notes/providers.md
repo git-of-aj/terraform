@@ -45,3 +45,21 @@ provider "aws" {
 - init can be run against an empty directory with the `-from-module=MODULE-SOURCE` option, in which case the given module will be copied into the target directory before any other initialization steps are run.
 - [Backend Initialisation](https://developer.hashicorp.com/terraform/cli/commands/init#backend-initialization)
 - [TF with Pipelines](https://developer.hashicorp.com/terraform/tutorials/automation/automate-terraform?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS)
+
+---------------------------------------------------------------
+## Provider Auth Methods:
+1. **Env Variables**
+```powershell
+# TESTED:
+# Exporting like $Keys ==> saves variables but TF can't access it and gives error: 
+#  terraform plan
+╷
+│ Error: No valid credential sources found
+│ 
+│   with provider["registry.terraform.io/hashicorp/aws"],
+│   on vpc.tf line 10, in provider "aws":
+│   10: provider "aws" {
+
+$env:AWS_ACCESS_KEY_ID = "your_access_key"
+$env:AWS_SECRET_ACCESS_KEY = "your_secret_key"
+```
