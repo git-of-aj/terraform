@@ -70,3 +70,21 @@ $env:AWS_SECRET_ACCESS_KEY = "your_secret_key"
 - `tf validate` commands validates config, shares error like - unsupported args, undeclared variable with line number and debug info..
 - like in ec2 resource block give sky = 'blue' // give var.exmaple without doing => variable "environment" {}
 - TF Plan auto runs validate bTS
+```sh
+terraform validate -var="env=true"
+╷
+│ Error: Failed to parse command-line flags
+│ 
+│ flag provided but not defined: -var
+```
+### vs 
+```sh
+terraform validate                
+╷
+│ Error: Unsupported argument
+│
+│   on vpc.tf line 73, in resource "aws_iam_group" "grp":
+│   73:   mangu = aansh
+│
+│ An argument named "mangu" is not expected here.
+```
