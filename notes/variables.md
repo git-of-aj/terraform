@@ -103,17 +103,16 @@ resource "aws_instance" "prod" {
 **locals**:
 - Common Configuration Values: like aws regions
 - Calculations or Expressions:
-  ```sh
+```sh
   locals {
   num1 = 10
   num2 = 20
   sum  = local.num1 + local.num2
 }
-
 output "sum_result" {
   value = local.sum
 }
-  ```
+```
 
 **Variables**:
 1. Customization and Inputs: When you want to provide input that can change for different environments, projects, or users. For instance, if you're deploying resources in different regions:
