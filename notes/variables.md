@@ -33,8 +33,15 @@ variable "instancetype" {
 ```
 ❓❓❓ What Happens if you don't specify default value above?
 - TF asks you for value when you run TF plan / Apply
+- like this - ` terraform plan
+var.allow_ip
+  Enter a value:`
 ```sh
-variable "instancetype" {}
+variable "name" {
+  default = "Terraform"
+}
+
+variable "allow_ip" {}
 ```
 ### terraform.tfvars
 
