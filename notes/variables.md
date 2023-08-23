@@ -70,3 +70,31 @@ export TF_VAR_instancetype t2.nano
 echo TF_VAR_instancetype
 ```
 
+## Conditions:
+condition ? true-value: value-2-take-if-it's-false
+
+```sh
+
+provider "aws" {
+  region     = "us-west-2"
+  access_key = "YOUR-ACCESS-KEY"
+  secret_key = "YOUR-SECRET-KEY"
+}
+
+# create this variable file here or in Variables.tf file...
+variable "istest" {}
+
+resource "aws_instance" "dev" {
+   ami = "ami-082b5a644766e0e6f"
+   instance_type = "t2.micro"
+   count = var.istest == true ? 3 : 0
+# the above line == count = 3 => when istest = True
+}
+
+resource "aws_instance" "prod" {
+   ami = "ami-082b5a644766e0e6f"
+   instance_type = "t2.large"
+   count = var.istest == false ? 1 : 0
+}
+
+```
