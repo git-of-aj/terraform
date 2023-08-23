@@ -98,3 +98,23 @@ resource "aws_instance" "prod" {
 }
 
 ```
+## Terraform Locals
+> Terraform locals are best suited for defining values that are used internally within a configuration file or for calculations, while Terraform variables are ideal for customizing configurations, allowing reusability, and providing inputs from external sources.
+**locals**:
+- Common Configuration Values: like aws regions
+- Calculations or Expressions:
+  ```sh
+  locals {
+  num1 = 10
+  num2 = 20
+  sum  = local.num1 + local.num2
+}
+
+output "sum_result" {
+  value = local.sum
+}
+  ```
+
+**Variables**:
+1. Customization and Inputs: When you want to provide input that can change for different environments, projects, or users. For instance, if you're deploying resources in different regions:
+2. Dynamic Inputs: variables values canbe changed easily using tfvars etc methods
