@@ -12,3 +12,5 @@ Followed Zeal Vora Udemy Course - https://github.com/zealvora/terraform-beginner
 
 ### AWS 
 - contains all codes for AWS
+
+~ means update in place
