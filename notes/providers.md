@@ -88,3 +88,14 @@ terraform validate
 │
 │ An argument named "mangu" is not expected here.
 ```
+## TF TAint earlier it was a seperate comd now it's -replace flag
+Destroy and recreate resources:
+`terraform apply -replace="aws_instance.myec2"`
+## Splat Expression [*]
+- SPlat expression gets list of all attributes 
+- like if count 3 for IAM users => get aRN of all 3 created users =>
+```sh
+output "arns" {
+  value = aws_iam_user.lb[*].arn
+}
+```
