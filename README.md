@@ -1,4 +1,6 @@
 # Terraform
+Followed Zeal Vora Udemy Course - https://github.com/zealvora/terraform-beginner-to-advanced-resource
++ Terraform Docs 
 
 ### Phase -1
 - Contains all Basic Terraform Features (providers,tfvars,variables,output, alias etc)
