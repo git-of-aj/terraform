@@ -14,3 +14,8 @@ Followed Zeal Vora Udemy Course - https://github.com/zealvora/terraform-beginner
 - contains all codes for AWS
 
 ~ means update in place
+
+## TF Cloud
+Terraform Cloud (free for up to five users), you can securely share your state with your teammates, provide a stable environment for Terraform to run in, and prevent race conditions when multiple people make configuration changes at once.
+
+You can also connect Terraform Cloud to version control systems (VCSs) like GitHub, GitLab, and others, allowing it to automatically propose infrastructure changes when you commit configuration changes to VCS. This lets you manage changes to your infrastructure through version control, as you would with application code.
