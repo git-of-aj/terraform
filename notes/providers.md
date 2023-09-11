@@ -31,6 +31,7 @@ provider "aws" {
 - tf refresh: changes tfstate file like if you change region .... but you also have backup state file 
 - Terraform Cloud and Terraform Enterprise install providers as part of every run.
 - To save time: plugin_cache_dir : store in cache
+- create a dependency lock file and commit it to version control along with your configuration. If a lock file is present, Terraform Cloud, CLI, and Enterprise will all obey it when installing providers.
 
 > DOCS SAYS- To ensure Terraform always installs the same provider versions for a given configuration, you can use Terraform CLI to create a dependency lock file and commit it to version control along with your configuration.
  - Reinitializing Only Modules - `Tf Get` but many ignore it as `TF init` does all work.
