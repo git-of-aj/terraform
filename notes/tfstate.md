@@ -17,4 +17,12 @@
 - A shared place where all TF users can access latest state file
 - Terraform supports storing state in Terraform Cloud, HashiCorp Consul, Amazon S3, Azure Blob Storage, Google Cloud Storage
 - Remote state allows you to share output values with other configurations. => For example, a core infrastructure team can handle building the core machines, networking, etc. and can expose some information to other teams to run their own infrastructure. As a more specific example with AWS: you can expose things such as VPC IDs, subnets, NAT instance IDs, etc. through remote state and have other Terraform states consume that
+
+## Backends 
+=> **Backends define where Terraform's state snapshots are stored.**
+- AzureRM = Storage Account = https://developer.hashicorp.com/terraform/language/v1.1.x/settings/backends/azurerm
+- AWS = S3 + DynamoDB = https://developer.hashicorp.com/terraform/language/v1.1.x/settings/backends/s3
+## state locking
+- If supported by your backend, Terraform will AUTO lock your state for all operations that could write state. This prevents others from acquiring the lock and potentially corrupting your state. [NO Message displayed it is Locked]
+- Force Unlock , 
 Exmaple :  https://developer.hashicorp.com/terraform/language/v1.1.x/state/remote-state-data
