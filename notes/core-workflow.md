@@ -6,6 +6,11 @@ https://developer.hashicorp.com/terraform/intro/v1.1.x/core-workflow
 > 💡💡💡💡💡💡
 > 😊😊 Create github issues for collab, review each pull request => merge it
 > AZURE DEPLOYMENT GATES => team notices that a certain change could result in service disruption, they may decide to delay merging its pull request until they can schedule a maintenance window.
+
+- Many manual Changes on Portal now tf plan different that your reviewd and approved one.....
+- It is at this point that the team asks questions about the potential implications of applying the change. Do we expect any service disruption from this change? Is there any part of this change that is high risk? Is there anything in our system that we should be watching as we apply this? Is there anyone we need to notify that this change is happening?
+- sometimes team members will want to watch the apply output as it is happening. For teams that are running Terraform locally, this may involve a **screen share with the team**. For teams running **Terraform in CI, this may involve gathering around the build log**
+- 
 ## with team
 - each individual save their changes to version control branches to avoid colliding with each other's work.
 - ```
