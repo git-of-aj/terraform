@@ -1,6 +1,10 @@
 https://developer.hashicorp.com/terraform/intro/v1.1.x/core-workflow
 
 - git init => Write code => Init => Plan => fix errors => commit to git => Apply => git push (wwork just like dev so it's IaC)
+> 💡💡💡💡
+> TF PLAN OUTPUT: the team to review, ask questions, evaluate risks, and catch mistakes before any potentially harmful changes are made.
+> 💡💡💡💡💡💡
+> 😊😊 Create github issues for collab, review each pull request => merge it 
 ## with team
 - each individual save their changes to version control branches to avoid colliding with each other's work.
 - ```
