@@ -42,3 +42,7 @@ terraform plan -out=tfplan
 This command generates a plan and saves it to a file called `tfplan`. You can then review this plan to understand the changes Terraform would make if you were to apply it. If everything looks good, you can proceed with applying the plan using `terraform apply -auto-approve tfplan`.
 
 Using speculative plans is a best practice in Terraform to ensure safe and predictable infrastructure changes, especially in collaborative or production environments.
+
+## TF vAlidate
+[docs](https://developer.hashicorp.com/terraform/cli/v1.1.x/commands/validate) --->
+Validate runs checks that verify whether a configuration is syntactically valid and internally consistent, regardless of any provided variables or existing state. It is thus primarily useful for general verification of reusable modules, including correctness of attribute names and value types.
