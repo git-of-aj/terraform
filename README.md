@@ -14,7 +14,15 @@ Followed Zeal Vora Udemy Course - https://github.com/zealvora/terraform-beginner
 - contains all codes for AWS
 
 ~ means update in place
-
+## Terraform Module
+- TF init install everything => checks tf version in both module and main file
+- my module ~2.0 while main.tf ~3..0
+```ps1
+│ Error: Failed to query available provider packages
+│
+│ Could not retrieve the list of available versions for provider hashicorp/azurerm: no available releases match 
+│ the given constraints ~> 2.0, ~> 3.0
+```
 ## TF Cloud
 Terraform Cloud (free for up to five users), you can securely share your state with your teammates, provide a stable environment for Terraform to run in, and prevent race conditions when multiple people make configuration changes at once.
 
