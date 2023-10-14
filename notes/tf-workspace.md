@@ -1,0 +1,4 @@
+- like venv in py
+- different state file & tfvars file
+- without tf init you can't run it => gives error
+- terraform workspace list => default workpsace auto created 
